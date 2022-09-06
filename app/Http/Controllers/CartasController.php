@@ -14,10 +14,55 @@ class CartasController extends Controller
      */
     public function index()
     {
+
+        // $jugadores = 4;
+
+        // $cantCartas  = Cartas::count(); 
+
+        // $cartasXjugador = $cantCartas/$jugadores;
+
+        // var_dump($cartasXjugador);
+
+        // $c = 1;
         
-        $cartas = Cartas::all();
+        // $f=[];
+
+        // $cartas = [];
+
+
+        // for($i=0; $i<$jugadores; $i + 1){
+        //     // for($j=0; $j<$cartasXjugador; $j++){
+
+        //     //     $f[$i];
+        //     //     // $c++;
+                
+        //     // }
+        //     $jugadores[$i];
+
+        // }
+        
+        $cartas = Cartas::OrderbyRaw('rand()')->take(4)->get();
+
+        
+        
+        // $cartas = Cartas::all();
+
+        // for ($i = 0; $i < $cartas->count(); $i + 1){
+        //     $cartas->get($i)->OrderbyRaw('rand()')->take(4)->get();
+  
+           
+        // }
+
+      
+        // return $cartas;
         
         return view('juego', compact('cartas'));
+    }
+
+    public function cartaAleatoria(){
+
+        return  Cartas::OrderbyRaw('rand()')->take(4)->get();
+         
     }
 
     /**
