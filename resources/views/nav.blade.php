@@ -10,8 +10,12 @@
   <body style="background-color: purple">
     <section class="col-12 d-flex">
         <nav class="w-100 d-flex flex-wrap justify-content-end bg-success p-2 gap-2 shadow-lg">
-             <p class="text-white">juancho</p>
-             <i class="bi bi-person-circle text-white"></i>
+             <p class="text-white">{{Auth()->User()->name}}</p>
+             <form action="{{route('logout')}}" method="post">
+              @csrf
+              <button class="bi bi-person-circle text-white"></button>
+            </form>
+
         </nav>
     </section>
     <section class="col">

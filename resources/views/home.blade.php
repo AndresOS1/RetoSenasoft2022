@@ -1,8 +1,8 @@
 @extends('nav')
 @section('content')
     <section class="col-12 d-flex justify-content-center align-items-center flex-column " style="height: 100vh;">
-        <div class="col-5 h-25 text-break d-flex justify-content-center flex-wrap flex-column">
-            <button class="btn btn-success h-25 ">crear partida</button>
+        <div class="col-5  h-25 text-break d-flex justify-content-center flex-wrap flex-column">
+            <a class="btn btn-success h-25 " href="{{route('juego')}}">crear partida</a>
             <button class="btn btn-success h-25 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">introducir
                 codigo</button>
         </div>
