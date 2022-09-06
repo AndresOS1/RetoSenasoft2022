@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('cartas', function (Blueprint $table) {
             $table->id('id_carta');
             $table->string('carta');
+            $table->string('img_carta');
             $table->string('modelo');
             $table->integer('cilindraje');
             $table->integer('cilindros');

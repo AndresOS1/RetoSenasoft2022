@@ -17,9 +17,9 @@ class CartasSeeder extends Seeder
     {
         
         $data = [
-            ['carta' => '1A', 'modelo'=>'Ferrari-2022','cilindraje' => 1497,'cilindros'=>6,'potencia'=>800,'revoluciones'=>11200,'peso'=>569],
-            ['carta' => '2A', 'modelo'=>'Red Bull-2022','cilindraje' => 1197,'cilindros'=>8,'potencia'=>760 ,'revoluciones'=>12120,'peso'=>409],
-            ['carta' => '3A', 'modelo'=>'McLaren F1 GTR','cilindraje' => 1507,'cilindros'=>8,'potencia'=>870,'revoluciones'=>12312,'peso'=>486],
+            ['carta' => '1A','img_carta'=>'https://images.mediotiempo.com/TFAt7R3tfhrUe0AogtvLHnmRfIE=/0x530/uploads/media/2021/03/04/aston-martin-am-correra-vettel.jpg', 'modelo'=>'astin-martin-vatle','cilindraje' => 1497,'cilindros'=>6,'potencia'=>800,'revoluciones'=>11200,'peso'=>569],
+            ['carta' => '2A','img_carta'=>'https://phantom-marca.unidadeditorial.es/448e4fb19e054941ea00c9a01a60c280/resize/1320/f/jpg/assets/multimedia/imagenes/2022/02/09/16444242286100.jpg', 'modelo'=>'Red Bull-2022','cilindraje' => 1197,'cilindros'=>8,'potencia'=>760 ,'revoluciones'=>12120,'peso'=>409],
+            ['carta' => '3A','img_carta'=>'https://www.diariomotor.com/imagenes/picscache/1440x655c/McLaren_F1_GTR_028R_01_1440x655c.jpg', 'modelo'=>'McLaren F1 GTR','cilindraje' => 1507,'cilindros'=>8,'potencia'=>870,'revoluciones'=>12312,'peso'=>486],
             ['carta' => '4A', 'modelo'=>'Mercedes-2022','cilindraje' => 1697,'cilindros'=>8,'potencia'=>1110 ,'revoluciones'=>12216 ,'peso'=>434],
             ['carta' => '5A', 'modelo'=>'Aston Martin AMR22.','cilindraje' => 2000,'cilindros'=>8,'potencia'=>1700,'revoluciones'=>13000,'peso'=>425],
             ['carta' => '6A', 'modelo'=>'Mercedes W13','cilindraje' => 1700,'cilindros'=>6,'potencia'=>1500,'revoluciones'=>11000,'peso'=> 370],

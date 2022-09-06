@@ -59,126 +59,61 @@
              </div>
 
 
+             <section class="w-100 d-flex h-auto" >
+               @foreach($cartas as $c)
+                        <article class="col-3 border p-2 border-5 rounded-4 shadow-lg">
+                            <div class="w-100 d-flex">
+                                <p>{{$c->carta}}</p>
+                            </div>
+                            <div class="w-100 d-flex h-50">
+                                <img src="{{$c->img_carta}}" alt="" class="img-fluid rounded-4">
+                            </div>
+                            <div class="w-100 d-flex">
+                                <p>{{$c->modelo}}</p>
+                            </div>
+                            <div class="w-100 d-flex border bg-black-50 p-2 flex-column h-25">
+                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="">
+                                    <option selected>seleccione con que luchar</option>
+                                    <option value="1">
+                                    <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                        <p>Cilingraje:</p>
+                                        <p>{{$c->cilindraje}} cc</p>
+                                    </div>
+                                    </option>
+                                    <option value="2">
+                                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                            <p>cilindros :</p>
+                                            <p>{{$c->cilindros}} cc</p>
+                                        </div>
+                                    </option>
+                                    <option value="3">
+                                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                            <p>Potencias:</p>
+                                            <p>{{$c->potencia}}cc</p>
+                                        </div>
+                                    </option>
 
-             <section class="w-100 d-flex">
+                                    <option value="3">
+                                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                            <p>revoluciones:</p>
+                                            <p>{{$c->revoluciones}}cc</p>
+                                        </div>
+                                    </option>
 
-                 <article class="col-3 border p-2 border-5 rounded-4 shadow-lg">
-                    <div class="w-100 d-flex">
-                        <p>1A</p>
-                    </div>
-                    <div class="w-100 d-flex h-50">
-                         <img src="img/photo3.jpg" alt="" class="img-fluid rounded-4">
-                    </div>
-                    <div class="w-100 d-flex">
-                        <p>Carro melo</p>
-                    </div>
-                    <div class="w-100 d-flex border bg-black-50 p-2 flex-column h-25">
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                            <option selected>seleccione con que luchar</option>
-                            <option value="1">
-                               <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                                <p>Cilingraje:</p>
-                                <p>1497 cc</p>
-                               </div>
-                            </option>
-                            <option value="2">
-                                <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                                    <p>Cilingraje:</p>
-                                    <p>1497 cc</p>
-                                   </div>
-                            </option>
-                            <option value="3">
-                                <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                                    <p>Cilingraje:</p>
-                                    <p>1497 cc</p>
-                                </div>
-                            </option>
-                          </select>
-                    </div>
-                 </article>
-                 <article class="col-3 border p-2 border-5 rounded-4 shadow-lg">
-                    <div class="w-100 d-flex">
-                        <p>1A</p>
-                    </div>
-                    <div class="w-100 d-flex h-50">
-                         <img src="img/carro.jpg" alt="" class="img-fluid rounded-4">
-                    </div>
-                    <div class="w-100 d-flex">
-                        <p>Carro melo</p>
-                    </div>
-                    <div class="w-100 d-flex border bg-black-50 p-2 flex-column">
-                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                            <p>Cilingraje:</p>
-                            <p>1497 cc</p>
-                        </div>
-                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                            <p>Cilingraje:</p>
-                            <p>1497 cc</p>
-                        </div>
-                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                            <p>Cilingraje:</p>
-                            <p>1497 cc</p>
-                        </div>
-                    </div>
-                 </article>
-                 <article class="col-3 border p-2 border-5 rounded-4 shadow-lg">
-                    <div class="w-100 d-flex">
-                        <p>1A</p>
-                    </div>
-                    <div class="w-100 d-flex h-50">
-                         <img src="img/carro.jpg" alt="" class="img-fluid rounded-4">
-                    </div>
-                    <div class="w-100 d-flex">
-                        <p>Carro melo</p>
-                    </div>
-                    <div class="w-100 d-flex border bg-black-50 p-2 flex-column">
-                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                            <p>Cilingraje:</p>
-                            <p>1497 cc</p>
-                        </div>
-                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                            <p>Cilingraje:</p>
-                            <p>1497 cc</p>
-                        </div>
-                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                            <p>Cilingraje:</p>
-                            <p>1497 cc</p>
-                        </div>
-                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                            <p>Cilingraje:</p>
-                            <p>1497 cc</p>
-                        </div>
-                    </div>
-                 </article>
-                 <article class="col-3 border p-2 border-5 rounded-4 shadow-lg">
-                    <div class="w-100 d-flex">
-                        <p>1A</p>
-                    </div>
-                    <div class="w-100 d-flex h-50">
-                         <img src="img/carro.jpg" alt="" class="img-fluid rounded-4">
-                    </div>
-                    <div class="w-100 d-flex">
-                        <p>Carro melo</p>
-                    </div>
-                    <div class="w-100 d-flex border bg-black-50 p-2 flex-column">
-                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                            <p>Cilingraje:</p>
-                            <p>1497 cc</p>
-                        </div>
-                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                            <p>Cilingraje:</p>
-                            <p>1497 cc</p>
-                        </div>
-                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                            <p>Cilingraje:</p>
-                            <p>1497 cc</p>
-                        </div>
-                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
-                            <p>Cilingraje:</p>
-                            <p>1497 cc</p>
-                        </div>
-                    </div>
-                 </article>
+                                    <option value="3">
+                                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                            <p>peso:</p>
+                                            <p>{{$c->peso}}cc</p>
+                                        </div>
+                                    </option>
+
+
+                                </select>
+                            </div>
+                        </article>
+               @endforeach
+                
+                 
              </section>
             
          </section>
