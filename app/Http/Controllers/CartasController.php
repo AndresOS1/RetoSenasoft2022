@@ -17,7 +17,7 @@ class CartasController extends Controller
         
         $cartas = Cartas::all();
         
-        return view('');
+        return view('juego', compact('cartas'));
     }
 
     /**
