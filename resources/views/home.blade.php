@@ -2,7 +2,11 @@
 @section('content')
     <section class="col-12 d-flex justify-content-center align-items-center flex-column " style="height: 100vh;">
         <div class="col-5  h-25 text-break d-flex justify-content-center flex-wrap flex-column">
-            <a class="btn btn-success h-25 " href="{{route('juego')}}">crear partida</a>
+            <form action="{{route('crearPartida')}}" class="h-25 d-flex" method="POST">
+                @csrf
+                <button class="btn btn-success w-100 h-100 " >crear partida</button>
+            </form>
+
             <button class="btn btn-success h-25 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">introducir
                 codigo</button>
         </div>

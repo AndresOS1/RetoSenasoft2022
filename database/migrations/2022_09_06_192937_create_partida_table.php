@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('partida', function (Blueprint $table) {
             $table->id('id_partida');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('carta_id');
-
+            // $table->unsignedBigInteger('carta_id');
+            $table->string('password');
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('carta_id')->references('id_carta')->on('cartas');
+            // $table->foreign('carta_id')->references('id_carta')->on('cartas');
 
             $table->timestamps();
         });
