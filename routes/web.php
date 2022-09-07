@@ -39,5 +39,5 @@ Route::get('/juego', [CartasController::class,'index'])->name('juego');
 Route::get('home',[HomeController::class,'entorno'])->name('home');
 // Route::get('partida',[PartidaController::class,'create'])->name('partida')->middleware('Auth');
 
-Route::get('entorno/{id}',[PartidaController::class,'show'])->name('entorno');
+Route::post('entorno',[PartidaController::class,'show'])->name('entorno');
 Route::post('crearPartida',[PartidaController::class,'create'])->name('crearPartida');

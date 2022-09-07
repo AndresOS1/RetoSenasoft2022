@@ -29,8 +29,18 @@ class PartidaController extends Controller
     } 
 
 
-    public function show($id){
-          $partida=Partida::find($id);
-          return $partida;
+    public function show( Request $request){
+          if($password=Partida::where('password','=',$request->password)->first()){
+            $password=Partida::select('id_partida')
+                               ->where('password','=',$request->password)
+                               ->get();
+             $partida=Partida::find($password);
+             return $partida;
+             
+          }else{
+            Alert::error('no existe tal partida ');
+            return redirect()->route('home');
+          }
+
     }
 }
