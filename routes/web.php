@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::get('/juego', [CartasController::class,'index']);
 
-
+Route::get('gg',[CartasController::class,'gg']);
