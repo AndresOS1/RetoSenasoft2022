@@ -55,8 +55,56 @@ class CartasController extends Controller
 
       
         // return $cartas;
+        $players=array(['andres'],['pepito'],['Juan'],['Camilo']);
+
+        $baraja1 =  Cartas::OrderbyRaw('rand()')->take(4)->get();
+        $baraja2 =  Cartas::OrderbyRaw('rand()')->take(4)->get();
+        $baraja3 =  Cartas::OrderbyRaw('rand()')->take(4)->get();
+        $baraja4 =  Cartas::OrderbyRaw('rand()')->take(4)->get();
+        $deck = array($baraja1, $baraja2, $baraja3, $baraja4);
         
-        return view('juego', compact('cartas'));
+        shuffle($deck);
+        
+        $player_card = array();
+
+        $cd = array();
+        
+        shuffle($deck);
+        $player_card = array_chunk($deck, 2);
+    
+        $player_card = $players;
+        for($i = 0; $i < count($deck); $i++){
+                $player_card[$i % count($players)][] = $deck[$i];
+               $f = array_push($cd, $player_card[$i]); 
+        }
+
+        // dd($cd) ; 
+
+        return $cd;
+
+        // foreach ($player_card as $player){
+
+        //     return $player->
+        // }
+        // return $player_card;
+        // if($player_card[0][1][0]->modelo == $player_card[2][1][0]->modelo){
+           
+        //     dd('hola');
+
+        // }    
+
+
+          
+
+        // for($i = 0; $i < count($player_card); $i++){
+
+        //     dd($player_card[$i]);
+        // }
+        // foreach($player_card as $player){
+        //     dd($player);
+        // }
+        
+        return view('juego', compact('player_card','cartas'));
     }
 
     public function cartaAleatoria(){
@@ -65,28 +113,31 @@ class CartasController extends Controller
          
     }
     public function gg(){
-        $players=6;
-        $deck = array(
-            'AD', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'JD', 'QD', 'KD',
-            'AC', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'JC', 'QC', 'KC',
-            'AH', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', 'TH', 'JH', 'QH', 'KH',
-            'AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'JS', 'QS', 'KS'
-        );
+        
+
+        // return $cartas;
+        $players=array(['andres'],['pepito'],['Juan'],['Camilo']);
+
+        $baraja1 =  Cartas::OrderbyRaw('rand()')->take(4)->get();
+        $baraja2 =  Cartas::OrderbyRaw('rand()')->take(4)->get();
+        $baraja3 =  Cartas::OrderbyRaw('rand()')->take(4)->get();
+        $baraja4 =  Cartas::OrderbyRaw('rand()')->take(4)->get();
+        $deck = array($baraja1, $baraja2, $baraja3, $baraja4);
         
         shuffle($deck);
         
         $player_card = array();
         
         shuffle($deck);
-        $player_card = array_chunk($deck, 13);
+        $player_card = array_chunk($deck, 2);
     
-        $player_card = [[1],[2],[3],[4]]; // four players
+        $player_card = $players; // four players
         for($i = 0; $i < count($deck); $i++){
-                $player_card[$i % 4][] = $deck[$i];   
+                $player_card[$i % count($players)][] = $deck[$i];   
                 
         }
-        return $player_card; 
 
+        return $player_card;
 
     }
 

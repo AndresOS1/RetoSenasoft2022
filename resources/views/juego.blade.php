@@ -14,7 +14,7 @@
                           <div class="w-25 d-flex justify-content-center">
                               <section class="w-25 d-flex flex-column align-items-center text-break justify-content-center">
                                    <i class="bi bi-person-circle d-flex w-25  justify-content-center text-white fs-1"></i>
-                                   <p class="d-flex text-white">Mendez</p>
+                                   <p class="d-flex text-white">{{$player_card[0][0]}}</p>
                               </section>
                               <section class="" style="width:15%">
                                 <section class="w-100 border d-flex justify-content-center rounded-2 shadow-lg bg-white">
@@ -25,7 +25,7 @@
                           <div class="w-25 d-flex justify-content-center">
                             <section class="w-25 d-flex flex-column align-items-center text-break justify-content-center">
                                 <i class="bi bi-person-circle d-flex w-25  justify-content-center text-white fs-1"></i>
-                                <p class="d-flex text-white">Mendez</p>
+                                <p class="d-flex text-white">{{$player_card[1][0]}}</p>
                            </section>
                            <section class="" style="width:15%">
                              <section class="w-100 border d-flex justify-content-center rounded-2 shadow-lg bg-white">
@@ -36,7 +36,7 @@
                           <div class="w-25 d-flex justify-content-center">
                             <section class="w-25 d-flex flex-column align-items-center text-break justify-content-center">
                                 <i class="bi bi-person-circle d-flex w-25 fs-1 justify-content-center text-white"></i>
-                                <p class="d-flex text-white">Mendez</p>
+                                <p class="d-flex text-white">{{$player_card[2][0]}}</p>
                            </section>
                            <section class="" style="width:15%">
                              <section class="w-100 border d-flex justify-content-center rounded-2 shadow-lg bg-white">
@@ -47,7 +47,7 @@
                           <div class="w-25 d-flex justify-content-center">
                             <section class="w-25 d-flex flex-column align-items-center text-break justify-content-center">
                                 <i class="bi bi-person-circle d-flex w-25 fs-1 justify-content-center text-white"></i>
-                                <p class="d-flex text-white">Mendez</p>
+                                <p class="d-flex text-white">{{$player_card[3][0]}}</p>
                            </section>
                            <section class="" style="width:15%">
                              <section class="w-100 border d-flex justify-content-center rounded-2 shadow-lg bg-white">
@@ -60,17 +60,20 @@
 
 
              <section class="w-100 d-flex h-auto p-5 justify-content-center gap-5 flex-wrap flex-row "  >
-               @foreach($cartas as $c)
+               {{-- @foreach($cartas as $c) --}}
               
+               <div class="w-100 d-flex ">
+                <p></p>
+            </div>
                         <article class="col-2 border p-2 border-5 rounded-4 shadow-lg " >
                             <div class="w-100 d-flex ">
-                                <p>{{$c->carta}}</p>
+                                <p>{{$player_card[0][1][0]->carta}}</p>
                             </div>
                             <div class="w-100 d-flex h-50">
-                                <img src="{{$c->img_carta}}" alt="" class="img-fluid rounded-4">
+                                <img src="{{$player_card[0][1][0]->img_carta}}" alt="" class="img-fluid rounded-4">
                             </div>
                             <div class="w-100 d-flex mt-3">
-                                <p>{{$c->modelo}}</p>
+                                <p>{{$player_card[0][1][0]->modelo}}</p>
                             </div>
                             <div class="w-100 d-flex  bg-black-50 p-2 flex-column ">
                                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="" style="font-size:8pt ">
@@ -78,33 +81,33 @@
                                     <option value="1" class="">
                                     <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
                                         <p>Cilingraje:</p>
-                                        <p>{{$c->cilindraje}} cc</p>
+                                        <p>{{$player_card[0][1][0]->cilindraje}} cc</p>
                                     </div>
                                     </option>
                                     <option value="2">
                                         <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
                                             <p>cilindros :</p>
-                                            <p>{{$c->cilindros}} cc</p>
+                                            <p>{{$player_card[0][1][0]->cilindros}} cc</p>
                                         </div>
                                     </option>
                                     <option value="3">
                                         <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
                                             <p>Potencias:</p>
-                                            <p>{{$c->potencia}}cc</p>
+                                            <p>{{$player_card[0][1][0]->potencia}}cc</p>
                                         </div>
                                     </option>
 
                                     <option value="3">
                                         <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
                                             <p>revoluciones:</p>
-                                            <p>{{$c->revoluciones}}cc</p>
+                                            <p>{{$player_card[0][1][0]->revoluciones}}cc</p>
                                         </div>
                                     </option>
 
                                     <option value="3">
                                         <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
                                             <p>peso:</p>
-                                            <p>{{$c->peso}}cc</p>
+                                            <p>{{$player_card[0][1][0]->peso}}cc</p>
                                         </div>
                                     </option>
 
@@ -112,7 +115,7 @@
                                 </select>
                             </div>
                         </article>
-               @endforeach
+               {{-- @endforeach --}}
                 
                  
              </section>

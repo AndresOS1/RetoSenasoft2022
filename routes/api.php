@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/cartasale', [CartasController::class,'cartaAleatoria']);
+Route::get('gg',[CartasController::class,'gg']);
