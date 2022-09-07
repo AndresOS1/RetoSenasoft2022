@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Partida;
 use Auth;
 use App\Models\User;
+use App\Models\Participantes;
 use Alert;  
 class PartidaController extends Controller
 {
@@ -29,8 +30,25 @@ class PartidaController extends Controller
     } 
 
 
-    public function show($id){
-          $partida=Partida::find($id);
-          return $partida;
+    public function show( Request $request){
+          if($password=Partida::where('password','=',$request->password)->first()){
+            $password=Partida::select('id_partida')
+                               ->where('password','=',$request->password)
+                               ->get();
+             $partida=Partida::find($password);
+
+             $participantes=new Participantes();
+             foreach($partida as $p){       
+             } 
+             $participantes->partida_id=$p->id_partida;
+             $participantes->participantes=Auth()->user()->id;
+             $participantes->save();
+             
+             
+          }else{
+            Alert::error('no existe tal partida');
+            return redirect()->route('home');
+          }
+
     }
 }

@@ -18,7 +18,6 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             // $table->unsignedBigInteger('carta_id');
             $table->string('password');
-
             $table->foreign('user_id')->references('id')->on('users');
             // $table->foreign('carta_id')->references('id_carta')->on('cartas');
 
