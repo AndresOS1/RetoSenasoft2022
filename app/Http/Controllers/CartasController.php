@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Cartas;
 use Illuminate\Http\Request;
 
-
 class CartasController extends Controller
 {
     /**
@@ -66,37 +65,28 @@ class CartasController extends Controller
          
     }
     public function gg(){
-        //$players=6;
-        ////creo un array con toda la baraja de cartas existentes
-        // $deck = array(
-        //     'AD', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'JD', 'QD', 'KD',
-        //     'AC', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'JC', 'QC', 'KC',
-        //     'AH', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', 'TH', 'JH', 'QH', 'KH',
-        //     'AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'JS', 'QS', 'KS'
-        // );
-
-        ////desordeno la baraja de cartas y regreso un bool con la funcion shuffle
-        // shuffle($deck);
-
-        /////dejo una variable declarada como arra "$player_card"
-        // $player_card = array();
-
-        /////ingreso datos en secciones 13 cartas cada una de las secciones
-        // $player_card = array_chunk($deck, 13);
-
-        /////declaro el numero de secciones en la que se va a guradar datos
-        // $player_card = [[1],[2],[3],[4]];
+        $players=6;
+        $deck = array(
+            'AD', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'JD', 'QD', 'KD',
+            'AC', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'JC', 'QC', 'KC',
+            'AH', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', 'TH', 'JH', 'QH', 'KH',
+            'AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'JS', 'QS', 'KS'
+        );
         
-        ////un siclo que se va a reptir con el numero de cartas
-        // for($i = 0; $i < count($deck); $i++){
-        //         ///
-        //         $r=0;
-        //         $player_card[$i % 4][] = $deck[$i];
-        //         $r++;
-        //         $r=$player_card;
+        shuffle($deck);
+        
+        $player_card = array();
+        
+        shuffle($deck);
+        $player_card = array_chunk($deck, 13);
+    
+        $player_card = [[1],[2],[3],[4]]; // four players
+        for($i = 0; $i < count($deck); $i++){
+                $player_card[$i % 4][] = $deck[$i];   
                 
-        // }
-        // return $player_card; 
+        }
+        return $player_card; 
+
 
     }
 
