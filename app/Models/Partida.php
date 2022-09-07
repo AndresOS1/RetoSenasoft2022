@@ -16,5 +16,5 @@ class Partida extends Model
 
     protected $fillable = ['user_id','password'];
 
-    protected $hidden = ['id_partida'];
+    // protected $hidden = ['id_partida'];
 }

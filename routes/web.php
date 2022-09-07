@@ -5,6 +5,8 @@ use App\Http\Controllers\CartasController;
 use App\Http\Controllers\PartidaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\HomeController;
+use App\Models\Partida;
 // use Auth;
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +20,7 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('verLogin');
 });
 
 
@@ -34,10 +36,8 @@ Route::get('verRegistro',[RegisterController::class,'verRegister'])->name('verRe
 Route::post('Register',[RegisterController::class,'Register'])->name('Register');
 Route::get('/juego', [CartasController::class,'index'])->name('juego');
 
-Route::get('home',function(){
-    return view('home');
-})->name('home');
+Route::get('home',[HomeController::class,'entorno'])->name('home');
 // Route::get('partida',[PartidaController::class,'create'])->name('partida')->middleware('Auth');
 
-
+Route::get('entorno/{id}',[PartidaController::class,'show'])->name('entorno');
 Route::post('crearPartida',[PartidaController::class,'create'])->name('crearPartida');

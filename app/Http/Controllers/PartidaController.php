@@ -27,4 +27,10 @@ class PartidaController extends Controller
           $partida->password;
           $patida->save();
     } 
+
+
+    public function show($id){
+          $partida=Partida::find($id);
+          return $partida;
+    }
 }

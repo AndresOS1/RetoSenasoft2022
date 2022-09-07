@@ -9,6 +9,8 @@
 
             <button class="btn btn-success h-25 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">introducir
                 codigo</button>
+            <a class="btn btn-success h-25 mt-3" href="{{route('entorno',$idpartida)}}">introducir
+            codigo</a>
         </div>
     </section>
     <!-- Modal -->
