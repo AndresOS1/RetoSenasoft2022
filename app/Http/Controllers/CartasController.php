@@ -55,7 +55,7 @@ class CartasController extends Controller
 
       
         // return $cartas;
-        $players=array(['andres'],['pepito'],['Juan'],['Camilo']);
+        $players =  array(['Andres'],['Pepito'],['Juan'],['Camilo']);
 
         $baraja1 =  Cartas::OrderbyRaw('rand()')->take(4)->get();
         $baraja2 =  Cartas::OrderbyRaw('rand()')->take(4)->get();
@@ -75,12 +75,28 @@ class CartasController extends Controller
         $player_card = $players;
         for($i = 0; $i < count($deck); $i++){
                 $player_card[$i % count($players)][] = $deck[$i];
-               $f = array_push($cd, $player_card[$i]); 
+
         }
 
         // dd($cd) ; 
 
+        // return $cd;
+        // return $player_card;
+
+
+        for ($i = 0; $i < count($player_card); $i++){
+            // $cd = $player_card[$i];
+             for ($j = 0; $j < count($player_card[$i]); $j++){
+                // $cd = $player_card[$i][$j];
+               for ($k = 0; $k < count($player_card[$j]); $k++){
+                $cd = $player_card[$i][$j][$k];
+             }
+        }
+    }
+        
+
         return $cd;
+        
 
         // foreach ($player_card as $player){
 
@@ -116,7 +132,7 @@ class CartasController extends Controller
         
 
         // return $cartas;
-        $players=array(['andres'],['pepito'],['Juan'],['Camilo']);
+        $players=array(['Andres'],['Pepito'],['Juan'],['Camilo']);
 
         $baraja1 =  Cartas::OrderbyRaw('rand()')->take(4)->get();
         $baraja2 =  Cartas::OrderbyRaw('rand()')->take(4)->get();

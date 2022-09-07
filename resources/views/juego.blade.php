@@ -65,7 +65,9 @@
                <div class="w-100 d-flex ">
                 <p></p>
             </div>
-                        <article class="col-2 border p-2 border-5 rounded-4 shadow-lg " >
+                        <article class="col-2 border p-2 border-5 rounded-4 shadow-lg h-100" >
+                            <p class="d-flex text-dark">Carta de {{$player_card[0][0]}}</p>
+                            
                             <div class="w-100 d-flex ">
                                 <p>{{$player_card[0][1][0]->carta}}</p>
                             </div>
@@ -115,7 +117,172 @@
                                 </select>
                             </div>
                         </article>
+
+
+                        
+                        <article class="col-2 border p-2 border-5 rounded-4 shadow-lg h-100" >
+                            
+                            <p class="d-flex text-dark">Carta de {{$player_card[1][0]}}</p>
+
+                            <div class="w-100 d-flex ">
+                                <p>{{$player_card[0][1][1]->carta}}</p>
+                            </div>
+                            <div class="w-100 d-flex h-50">
+                                <img src="{{$player_card[0][1][1]->img_carta}}" alt="" class="img-fluid rounded-4">
+                            </div>
+                            <div class="w-100 d-flex mt-3">
+                                <p>{{$player_card[0][1][1]->modelo}}</p>
+                            </div>
+                            <div class="w-100 d-flex  bg-black-50 p-2 flex-column ">
+                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="" style="font-size:8pt ">
+                                    <option selected>Seleccione la opcion a comparar</option>
+                                    <option value="1" class="">
+                                    <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                        <p>Cilingraje:</p>
+                                        <p>{{$player_card[0][1][1]->cilindraje}} cc</p>
+                                    </div>
+                                    </option>
+                                    <option value="2">
+                                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                            <p>cilindros :</p>
+                                            <p>{{$player_card[0][1][1]->cilindros}} cc</p>
+                                        </div>
+                                    </option>
+                                    <option value="3">
+                                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                            <p>Potencias:</p>
+                                            <p>{{$player_card[0][1][1]->potencia}}cc</p>
+                                        </div>
+                                    </option>
+
+                                    <option value="3">
+                                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                            <p>revoluciones:</p>
+                                            <p>{{$player_card[0][1][1]->revoluciones}}cc</p>
+                                        </div>
+                                    </option>
+
+                                    <option value="3">
+                                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                            <p>peso:</p>
+                                            <p>{{$player_card[0][1][1]->peso}}cc</p>
+                                        </div>
+                                    </option>
+
+
+                                </select>
+                            </div>
+                        </article>
                {{-- @endforeach --}}
+
+               <article class="col-2 border p-2 border-5 rounded-4 shadow-lg h-100" >
+                            
+                <p class="d-flex text-dark">Carta de {{$player_card[2][0]}}</p>
+
+                <div class="w-100 d-flex ">
+                    <p>{{$player_card[0][1][2]->carta}}</p>
+                </div>
+                <div class="w-100 d-flex h-50">
+                    <img src="{{$player_card[0][1][2]->img_carta}}" alt="" class="img-fluid rounded-4">
+                </div>
+                <div class="w-100 d-flex mt-3">
+                    <p>{{$player_card[0][1][2]->modelo}}</p>
+                </div>
+                <div class="w-100 d-flex  bg-black-50 p-2 flex-column ">
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="" style="font-size:8pt ">
+                        <option selected>Seleccione la opcion a comparar</option>
+                        <option value="1" class="">
+                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                            <p>Cilingraje:</p>
+                            <p>{{$player_card[0][1][2]->cilindraje}} cc</p>
+                        </div>
+                        </option>
+                        <option value="2">
+                            <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                <p>cilindros :</p>
+                                <p>{{$player_card[0][1][2]->cilindros}} cc</p>
+                            </div>
+                        </option>
+                        <option value="3">
+                            <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                <p>Potencias:</p>
+                                <p>{{$player_card[0][1][2]->potencia}}cc</p>
+                            </div>
+                        </option>
+
+                        <option value="3">
+                            <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                <p>revoluciones:</p>
+                                <p>{{$player_card[0][1][2]->revoluciones}}cc</p>
+                            </div>
+                        </option>
+
+                        <option value="3">
+                            <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                <p>peso:</p>
+                                <p>{{$player_card[0][1][2]->peso}}cc</p>
+                            </div>
+                        </option>
+
+
+                    </select>
+                </div>
+            </article>
+
+
+            <article class="col-2 border p-2 border-5 rounded-4 shadow-lg h-100" >
+                            
+                <p class="d-flex text-dark">Carta de {{$player_card[3][0]}}</p>
+
+                <div class="w-100 d-flex ">
+                    <p>{{$player_card[0][1][3]->carta}}</p>
+                </div>
+                <div class="w-100 d-flex h-50">
+                    <img src="{{$player_card[0][1][3]->img_carta}}" alt="" class="img-fluid rounded-4">
+                </div>
+                <div class="w-100 d-flex mt-3">
+                    <p>{{$player_card[0][1][3]->modelo}}</p>
+                </div>
+                <div class="w-100 d-flex  bg-black-50 p-2 flex-column ">
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="" style="font-size:8pt ">
+                        <option selected>Seleccione la opcion a comparar</option>
+                        <option value="1" class="">
+                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                            <p>Cilingraje:</p>
+                            <p>{{$player_card[0][1][3]->cilindraje}} cc</p>
+                        </div>
+                        </option>
+                        <option value="2">
+                            <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                <p>cilindros :</p>
+                                <p>{{$player_card[0][1][3]->cilindros}} cc</p>
+                            </div>
+                        </option>
+                        <option value="3">
+                            <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                <p>Potencias:</p>
+                                <p>{{$player_card[0][1][3]->potencia}}cc</p>
+                            </div>
+                        </option>
+
+                        <option value="3">
+                            <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                <p>revoluciones:</p>
+                                <p>{{$player_card[0][1][3]->revoluciones}}cc</p>
+                            </div>
+                        </option>
+
+                        <option value="3">
+                            <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                                <p>peso:</p>
+                                <p>{{$player_card[0][1][3]->peso}}cc</p>
+                            </div>
+                        </option>
+
+
+                    </select>
+                </div>
+            </article>
                 
                  
              </section>
