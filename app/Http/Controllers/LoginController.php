@@ -24,7 +24,7 @@ class LoginController extends Controller
             if(Auth::attempt($credenciales)){
                     $token=$user->createToken('auth_token')->plainTextToken;
                     Alert::success('Iniciaste session correctamente');
-                    return view('home');
+                    return redirect()->route('home'); 
             }else{
                 Alert::error('Iniciaste session correctamente');
                 return redirect()->route('verLogin');
