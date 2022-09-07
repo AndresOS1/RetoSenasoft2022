@@ -8,7 +8,7 @@ $(document).ready(function () {
 $.get('/api/gg', function(data){
     for (let i=0; i<data.length; i++) {
         
-        // console.log(data[i]);
+        console.log(data[i]);
 
     data[i].forEach(element => console.log(element));
 
