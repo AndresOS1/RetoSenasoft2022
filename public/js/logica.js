@@ -5,13 +5,18 @@ $(document).ready(function () {
 
 
 
-$.get('/api/gg', function(data){
-    for (let i=0; i<data.length; i++) {
-        
-        console.log(data[i]);
+// $.get('/api/gg', function(data){
+//     for (let i=0; i<data.length; i++) {
+//         for (let j=0; j<data[i].length; j++) {
+//             // console.log(data[i][j]);
+//             for (let k=0; k<data[j].length; k++) {
+//                 console.log(data[i][j][k]);
+//             }
+//         }
 
-    data[i].forEach(element => console.log(element));
 
-    }
-})
+//     // data[i].forEach(element => console.log(element));
+
+//     }
+// })
 
