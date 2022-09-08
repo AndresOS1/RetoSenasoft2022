@@ -32,17 +32,20 @@ class PartidaController extends Controller
 
     public function show( Request $request){
           if($password=Partida::where('password','=',$request->password)->first()){
-            $password=Partida::select('id_partida')
-                               ->where('password','=',$request->password)
-                               ->get();
-             $partida=Partida::find($password);
+            // $password=Partida::select('id_partida')
+            //                    ->where('password','=',$request->password)
+            //                    ->get();
+            //  $partida=Partida::find($password);
 
-             $participantes=new Participantes();
-             foreach($partida as $p){       
-             } 
-             $participantes->partida_id=$p->id_partida;
-             $participantes->participantes=Auth()->user()->id;
-             $participantes->save();
+            //  $participantes=new Participantes();
+            //  foreach($partida as $p){       
+            //  } 
+            //  $participantes->partida_id=$p->id_partida;
+            //  $participantes->participantes=Auth()->user()->id;
+            //  $participantes->save();
+            Alert::success('entraste a la partida');
+            return redirect()->route('juego');
+            
              
              
           }else{

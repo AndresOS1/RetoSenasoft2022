@@ -15,7 +15,7 @@
              <p class="text-white fs-5">{{Auth()->User()->name}}</p>
              <form action="{{route('logout')}}" method="post">
               @csrf
-              <button class="bi bi-person-circle text-white btn"></button>
+              <button class="bi bi-door-open-fill fs-6 text-white btn"></button>
             </form>
 
         </nav>
