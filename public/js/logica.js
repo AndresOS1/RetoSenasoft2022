@@ -8,15 +8,19 @@ $(document).ready(function () {
         $('.jugadores').val(this.value);
 
 
-        var op1= document.getElementById('jugador2').options[document.getElementById('jugador2').selectedIndex].text;
-        var op2= document.getElementById('jugador3').options[document.getElementById('jugador3').selectedIndex].text;
-        var op3= document.getElementById('jugador4').options[document.getElementById('jugador4').selectedIndex].text;
+        var op1= parseInt(document.getElementById('jugador1').options[document.getElementById('jugador1').selectedIndex].text);
+        var op2= parseInt(document.getElementById('jugador2').options[document.getElementById('jugador2').selectedIndex].text);
+        var op3= parseInt(document.getElementById('jugador3').options[document.getElementById('jugador3').selectedIndex].text);
+        var op4= parseInt(document.getElementById('jugador4').options[document.getElementById('jugador4').selectedIndex].text);
         
 
-        if(op1 >op2){
-            alert('Ganaste')
-        }
 
+        
+
+        // console.log(typeof op1);
+        if(op1 >op2 ){
+            // alert('Ganaste')
+        }
 
 
         
