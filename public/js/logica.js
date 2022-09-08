@@ -19,7 +19,13 @@ $(document).ready(function () {
 
         // console.log(typeof op1);
         if(op1 >op2 ){
-            // alert('Ganaste')
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Ganaste la ronda',
+                showConfirmButton: false,
+                timer: 1500
+              })
         }
 
 
