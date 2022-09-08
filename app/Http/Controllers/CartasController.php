@@ -103,11 +103,11 @@ class CartasController extends Controller
         //     return $player->
         // }
         // return $player_card;
-        if($player_card[0][1][0]->modelo == $player_card[2][1][0]->modelo){
+        // if($player_card[0][1][0]->modelo == $player_card[2][1][0]->modelo){
            
-            dd('hola');
+        //     dd('hola');
 
-        }    
+        // }    
 
 
           
