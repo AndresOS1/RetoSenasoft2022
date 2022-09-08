@@ -10,11 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body class="bg-light bg-gradient">
-<<<<<<< HEAD
     @include('sweetalert::alert')
-=======
-    {{-- @include('sweetalert::alert') --}}
->>>>>>> 623449820096dbc61b8476425e8365af085259f1
      <section class="col-12 d-flex flex-column flex-wrap">
              <div class="w-100 d-flex p-2 ">
                      <div class="w-100 border p-4 d-flex flex-row shadow-lg rounded-4 justify-content-between bg-gradient" style="background: purple;">
