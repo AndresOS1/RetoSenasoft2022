@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
-  <body>
+  <body class="bg-light bg-gradient">
      <section class="col-12 d-flex flex-column flex-wrap">
              <div class="w-100 d-flex p-2 ">
-                     <div class="w-100 border p-4 d-flex flex-row shadow-lg rounded-4 justify-content-between bg-success">
+                     <div class="w-100 border p-4 d-flex flex-row shadow-lg rounded-4 justify-content-between bg-gradient" style="background: purple;">
                           <div class="w-25 d-flex justify-content-center">
                               <section class="w-25 d-flex flex-column align-items-center text-break justify-content-center">
                                    <i class="bi bi-person-circle d-flex w-25  justify-content-center text-white fs-1"></i>
@@ -61,20 +61,30 @@
 
              <section class="w-100 d-flex h-auto p-5 justify-content-center gap-5 flex-wrap flex-row "  >
                {{-- @foreach($cartas as $c) --}}
-               <div id="zonasDeSoltar" class="col-12 d-flex justify-content-around flex-row">
-                    <div class="zona-de-soltar" style="width: 200px; height:50vh;" value="">a</div>
-                    <div class="zona-de-soltar" style="width: 200px; height:50vh;" value="">a</div>
-                    <div class="zona-de-soltar"style="width: 200px; height:50vh;"  value="">a</div>
-                    <div class="zona-de-soltar"style="width: 200px; height:50vh;"  value="">a</div>
-               </div>
+               <div id="zonasDeSoltar" class="col-12 d-flex justify-content-around flex-row h-100">
+                <div class="border col d-flex justify-content-center rounded-4" >
+                    <div class="zona-de-soltar"style="width: 200px; height:70vh;"  value="">A</div>
+                </div>
+                
+                <div class="border col d-flex justify-content-center rounded-4">
+                    <div class="zona-de-soltar" style="width: 200px; height:70vh;" value="">B</div>
+                </div>                    
+                <div class="border col d-flex justify-content-center rounded-4">
+                    <div class="zona-de-soltar" style="width: 200px; height:70vh;" value="">C</div>
+                </div>
 
+                <div class="border col d-flex justify-content-center rounded-4">
+                    <div class="zona-de-soltar" style="width: 200px; height:70vh;" value="">D</div>
+                </div>              
+              </div>
 
-               <div class="card p-2 shadow-lg" style="width: 15rem;" draggable="true">
-                <h5 class="card-title">Carta de {{$player_card[0][0]}}</h5>
+              <div  class="col-3 d-flex justify-content-around flex-row h-100 flex-wrap">
+               <div class="card p-2 shadow-lg" style="width: 14rem; height:24rem" draggable="true">
+                <h5 class="card-title" style="color: purple;">Carta de {{$player_card[0][0]}}</h5>
                 <p>{{$player_card[0][1][0]->carta}}</p>
                 <img src="{{$player_card[0][1][0]->img_carta}}" class="img-fluid" width="300px" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{$player_card[0][1][0]->modelo}}</h5>
+                  <h5 class="card-title" style="color: purple;">{{$player_card[0][1][0]->modelo}}</h5>
                   <select class="form-select form-select-lg mb-3  jugadorIni" aria-label=".form-select-lg example" name="" id="jugador1" style="font-size:8pt ">
                     <option selected>Seleccione la opcion a comparar</option>
                     <option id="op1-jug1" value="1" class="">
@@ -112,7 +122,7 @@
 
 
                 </select>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  {{-- <a href="#" class="btn btn-primary" style="background: purple;">Go somewhere</a> --}}
                 </div>
               </div>
                <div class="w-100 d-flex ">
@@ -120,12 +130,12 @@
             </div>
 
             {{-- segunda card /////////////////////////////////////////////////////////////////////////////////////////////////--}}
-            <div class="card p-2 shadow-lg" style="width: 15rem;" draggable="true">
-                <h5 class="card-title">Carta de {{$player_card[1][0]}}</h5>
+            <div class="card p-2 shadow-lg" style="width: 14rem; height:24rem" draggable="true">
+                <h5 class="card-title" style="color: purple;">Carta de {{$player_card[1][0]}}</h5>
                 <p>{{$player_card[0][1][1]->carta}}</p>
                 <img src="{{$player_card[0][1][1]->img_carta}}" class="img-fluid"   alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{$player_card[0][1][1]->modelo}}</h5>
+                  <h5 class="card-title" style="color: purple;">{{$player_card[0][1][1]->modelo}}</h5>
                   <select class="form-select form-select-lg mb-3 jugadores" aria-label=".form-select-lg example" name="" id="jugador2" style="font-size:8pt ">
                     <option selected>Seleccione la opcion a comparar</option>
                     <option  value="1" class="">
@@ -163,17 +173,17 @@
 
 
                 </select>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  {{-- <a href="#" class="btn btn-primary" style="background: purple;">Go somewhere</a> --}}
                 </div>
               </div>
 
               {{-- tercera carta //////////////////////////////////////////////////////////////////////////--}}
-              <div class="card p-2 shadow-lg" style="width: 15rem;" draggable="true">
-                <h5 class="card-title">Carta de {{$player_card[2][0]}}</h5>
+              <div class="card p-2 shadow-lg" style="width: 14rem; height:24rem" draggable="true">
+                <h5 class="card-title " style="color: purple;">Carta de {{$player_card[2][0]}}</h5>
                 <p>{{$player_card[0][1][2]->carta}}</p>
                 <img src="{{$player_card[0][1][2]->img_carta}}" class="img-fluid"   alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{$player_card[0][1][2]->modelo}}</h5>
+                  <h5 class="card-title" style="color: purple;">{{$player_card[0][1][2]->modelo}}</h5>
                   <select class="form-select form-select-lg mb-3 jugadores" aria-label=".form-select-lg example" name="" id="jugador3" style="font-size:8pt ">
                     <option selected>Seleccione la opcion a comparar</option>
                     <option value="1">
@@ -211,19 +221,19 @@
 
 
                 </select>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  {{-- <a href="#" class="btn btn-primary" style="background: purple;">Go somewhere</a> --}}
                 </div>
               </div>
                   
                {{-- @endforeach --}}
 
             {{-- cuarta carta --}}
-            <div class="card p-2 shadow-lg" style="width: 15rem;" draggable="true">
-                <h5 class="card-title">Carta de {{$player_card[3][0]}}</h5>
+            <div class="card p-2 shadow-lg" style="width: 14rem; height:24rem" draggable="true">
+                <h5 class="card-title" style="color: purple;">Carta de {{$player_card[3][0]}}</h5>
                 <p>{{$player_card[0][1][3]->carta}}</p>
                 <img src="{{$player_card[0][1][3]->img_carta}}" class="img-fluid"   alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{$player_card[0][1][3]->modelo}}</h5>
+                  <h5 class="card-title" style="color: purple;">{{$player_card[0][1][3]->modelo}}</h5>
                   <select class="form-select form-select-lg mb-3  jugadores" aria-label=".form-select-lg example" name="" id="jugador4" style="font-size:8pt ">
                     <option selected>Seleccione la opcion a comparar</option>
                     <option value="1" class="">
@@ -261,11 +271,11 @@
 
 
                 </select>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  {{-- <a href="#" class="btn btn-primary" style="background: purple;">Go somewhere</a> --}}
                 </div>
               </div>
                   
-
+            </div>
            
                 
                  
