@@ -2,12 +2,12 @@
 @section('content')
 @include('sweetalert::alert')
 <div class="w-100 d-flex justify-content-center">
-    <div class="col-6 h-25">
+    <div class="col-3 h-25 mb-2">
         <img src="img/Recurso 1.png" alt="" class="img-fluid">
     </div>
 </div>
 
-    <section class="col-12 d-flex justify-content-center align-items-center flex-column " style="">
+    <section class="col-12 d-flex justify-content-center align-items-center flex-column " style=" ">
 
         <div class="col-5  h-25 text-break d-flex justify-content-center flex-wrap flex-column">
 
