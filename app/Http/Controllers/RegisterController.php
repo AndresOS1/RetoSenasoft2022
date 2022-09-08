@@ -27,14 +27,14 @@ class RegisterController extends Controller
                 $user->email=$request->email;
                 $user->password=Hash::make($request->password);
                 $user->save();  
-                Alert::success('usuario creado correcta mente');
+                Alert::success('Usuario creado correctamente');
                 return redirect()-> route('verLogin');
             }else{
-                Alert::error('se guardo mal un campo');
+                Alert::error('Se guardo mal un campo');
                 return redirect()->route('verRegister');
             }
          }else{
-            Alert::error('el email ya existe');
+            Alert::error('El email ya existe');
             return redirect()->route('verRegister');
          }
     }

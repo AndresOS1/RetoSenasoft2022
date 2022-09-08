@@ -10,15 +10,13 @@
 
             <button class="btn btn-success h-25 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">introducir
             codigo</button>    
-            
-
         </div>
     </section>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="{{route('entorno')}}" method="POST">
+                <form action="{{route('crearPartida')}}" method="POST">
                     @csrf
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Ingrese el codigo para entrar a la partida</h5>

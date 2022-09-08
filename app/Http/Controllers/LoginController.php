@@ -26,22 +26,22 @@ class LoginController extends Controller
                     Alert::success('Iniciaste session correctamente');
                     return redirect()->route('home'); 
             }else{
-                Alert::error('Iniciaste session correctamente');
+                Alert::error('Iniciaste sesion correctamente');
                 return redirect()->route('verLogin');
             }
             }else{
-                Alert::error('contraseña incorrecta');
+                Alert::error('Contraseña incorrecta');
                 return redirect()->route('verLogin');
             }
         }else{
-            Alert::error('el correo no existe');
+            Alert::error('El correo no existe');
             return redirect()->route('verLogin');
         }
     }
 
     public function logout(){
          Auth::logout();
-         Alert::warning('cerraste session');
+         Alert::warning('Cerraste sesion');
          return redirect()->route('verLogin');
     }
 }
