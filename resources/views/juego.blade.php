@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Play</title>
+    <link rel="shortcut icon" href="img/Recurso 1.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body class="bg-light bg-gradient">
+    @include('sweetalert::alert')
      <section class="col-12 d-flex flex-column flex-wrap">
              <div class="w-100 d-flex p-2 ">
                      <div class="w-100 border p-4 d-flex flex-row shadow-lg rounded-4 justify-content-between bg-gradient" style="background: purple;">
@@ -63,18 +65,18 @@
                {{-- @foreach($cartas as $c) --}}
                <div id="zonasDeSoltar" class="col-12 d-flex justify-content-around flex-row h-100">
                 <div class="border col d-flex justify-content-center rounded-4" >
-                    <div class="zona-de-soltar"style="width: 200px; height:70vh;"  value="">A</div>
+                    <div class="zona-de-soltar"style="width: 200px; height:70vh;"  value="">Carta de  {{$player_card[0][0]}}</div>
                 </div>
                 
                 <div class="border col d-flex justify-content-center rounded-4">
-                    <div class="zona-de-soltar" style="width: 200px; height:70vh;" value="">B</div>
+                    <div class="zona-de-soltar" style="width: 200px; height:70vh;" value="">Carta de {{$player_card[1][0]}}</div>
                 </div>                    
                 <div class="border col d-flex justify-content-center rounded-4">
-                    <div class="zona-de-soltar" style="width: 200px; height:70vh;" value="">C</div>
+                    <div class="zona-de-soltar" style="width: 200px; height:70vh;" value="">Carta de {{$player_card[2][0]}}</div>
                 </div>
 
                 <div class="border col d-flex justify-content-center rounded-4">
-                    <div class="zona-de-soltar" style="width: 200px; height:70vh;" value="">D</div>
+                    <div class="zona-de-soltar" style="width: 200px; height:70vh;" value="">Carta de {{$player_card[3][0]}}</div>
                 </div>              
               </div>
 
